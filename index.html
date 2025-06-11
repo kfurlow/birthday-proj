@@ -71,26 +71,27 @@
             margin: 10px 0;
         }
 
-        /* Mobile-specific tweaks */
         @media (max-width: 768px) {
-            .container {
-                max-width: 250px;
-                
-            }
-
-            .picture {
-                max-height: 200px;
-            }
-
-            .qr-code {
-                width: 70%;
-                min-width: 140px; /* Slightly smaller minimum for smaller devices */
-            }
-
-            .birthday {
-                font-size: 1.5em;
-            }
+        .container {
+            max-width: 300px; /* Allow a bit more width on mobile */
+            padding: 10px;
         }
+
+        .picture {
+            width: 80%;          /* Make the picture larger on mobile */
+            max-height: none;    /* Remove max-height restriction on mobile */
+        }
+
+        .qr-code {
+            width: 85%;          /* Make QR code much larger on mobile */
+            min-width: unset;    /* Let it fully resize with width */
+            max-width: 250px;    /* Optional: Set a new comfortable max width */
+        }
+
+        .birthday {
+            font-size: 1.7em;    /* Slightly larger text */
+        }
+}
 
     </style>
 </head>
