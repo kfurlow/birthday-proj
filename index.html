@@ -5,29 +5,13 @@
     <title>Birthday Girl</title>
     <style>
 
-        .container {
-            position: relative;
-            width: 80%;            /* Responsive: takes half the screen width */
-            max-width: 250px;      /* Will NOT grow larger than 400px */
-            min-width: 200px;      /* Optional: prevents it from getting too tiny */
-            margin: 50px auto;     /* Centers the container */
-            padding: 0px;
-            border-radius: 100px;      /* Optional for nicer look */
-            
-        }
-
-        .picture {
-            width: 90%;
-            height: auto;
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-            border: solid pink;
-            border-style: dotted;
-            border-width: 10px;
-        }
-
+        /* Center the whole page */
         body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
             background-color: mediumpurple;
             background-image: url("background-final.jpg");
             background-repeat: no-repeat;
@@ -36,37 +20,67 @@
             background-size: cover;
         }
 
+        /* Container Styling */
+        .container {
+            width: 90%;
+            max-width: 300px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 50px;
+            border: solid;
+            text-align: center; /* Center text and inline elements */
+            background-color: rgba(255, 255, 255, 0.2); /* Optional: add some contrast */
+        }
+
+        /* Picture Styling */
+        .picture {
+            width: 100%;
+            max-height: 250px; /* Limit the height */
+            object-fit: contain;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            border: solid;
+            object-fit: fill;
+        }
+
+        /* QR Code Styling */
         .qr-code {
             display: block;
             margin: 20px auto;
-            max-width: 70%;
+            width: 60%;           /* Responsive width */
+            min-width: 150px;     /* Minimum size to keep it readable */
+            max-width: 200px;     /* Optional: don’t let it grow too much */
             height: auto;
             border: 5px solid;
         }
 
+        /* Text Styling */
         .birthday {
-            display: block;
-            text-align: center;
             font-size: 2em;
-            margin-top: 20px;
-            color: pink;
-
-        }
-
-        h2{
-            text-align: center;
+            margin-top: 15px;
             color: pink;
         }
 
-        h3{
-            text-align: center;
+        h2, h3 {
             color: pink;
+            margin: 10px 0;
         }
 
+        /* Mobile-specific tweaks */
         @media (max-width: 768px) {
             .container {
+                max-width: 250px;
+                padding: 10px;
+            }
+
+            .picture {
+                max-height: 200px;
+            }
+
+            .qr-code {
                 width: 70%;
-                padding-top: 40%;
+                min-width: 140px; /* Slightly smaller minimum for smaller devices */
             }
 
             .birthday {
@@ -74,12 +88,11 @@
             }
         }
 
-
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="./kenya.jpg" class="picture">
+        <img src="./kenya.png" class="picture">
         <img src="cashapp-qr.jpg" class="qr-code">
         <h1 class="birthday">It's my Birthday</h1>
         <h2>Bless me and all my glory</h2>
