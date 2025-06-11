@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Girl</title>
+    <style>
+
+        .container {
+            position: relative;
+            width: 80%;            /* Responsive: takes half the screen width */
+            max-width: 300px;      /* Will NOT grow larger than 400px */
+            min-width: 300px;      /* Optional: prevents it from getting too tiny */
+            margin: 50px auto;     /* Centers the container */
+            padding: 20px;
+            border-radius: 100px;      /* Optional for nicer look */
+        }
+
+        .picture {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+             border: solid;
+        }
+
+        body {
+            background-color: mediumpurple;
+            background-image: url("background-final.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .qr-code {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 5px solid;
+        }
+
+        .birthday {
+            display: block;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+            color: pink;
+        }
+
+        h2{
+            text-align: center;
+            color: pink;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 20px auto;
+            }
+
+            .birthday {
+                font-size: 1.5em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./kai.jpg" class="picture">
+        <img src="qr mock.png" class="qr-code">
+        <h1 class="birthday">It's my Birthday</h1>
+        <h2>Bless me and all my glory</h2>
+    </div>
+</body>
+</html>
