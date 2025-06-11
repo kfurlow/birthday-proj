@@ -72,26 +72,49 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                max-width: 300px; /* Allow a bit more width on mobile */
+                padding: 10px;
+            }
+
+            .picture {
+                width: 80%;          /* Make the picture larger on mobile */
+                max-height: none;    /* Remove max-height restriction on mobile */
+            }
+
+            .qr-code {
+                width: 85%;          /* Make QR code much larger on mobile */
+                min-width: unset;    /* Let it fully resize with width */
+                max-width: 250px;    /* Optional: Set a new comfortable max width */
+            }
+
+            .birthday {
+                font-size: 1.7em;    /* Slightly larger text */
+            }
+        }
+
+        @media (max-width: 430px) {
         .container {
-            max-width: 300px; /* Allow a bit more width on mobile */
-            padding: 10px;
+            max-width: 350px;  /* Allow a bit more breathing room */
+            padding: 15px;
         }
 
         .picture {
-            width: 80%;          /* Make the picture larger on mobile */
-            max-height: none;    /* Remove max-height restriction on mobile */
+            width: 90%;         /* Make the picture larger */
+            max-height: none;   /* Remove height restriction */
         }
 
         .qr-code {
-            width: 85%;          /* Make QR code much larger on mobile */
-            min-width: unset;    /* Let it fully resize with width */
-            max-width: 250px;    /* Optional: Set a new comfortable max width */
+            width: 90%;         /* Make QR code much larger */
+            min-width: unset;   /* Allow full flexibility */
+            max-width: 300px;   /* Optional: comfortable upper limit */
         }
 
         .birthday {
-            font-size: 1.7em;    /* Slightly larger text */
+            font-size: 1.8em;   /* Keep text big and readable */
         }
-}
+    }
+
 
     </style>
 </head>
