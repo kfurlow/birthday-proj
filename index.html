@@ -8,20 +8,23 @@
         .container {
             position: relative;
             width: 80%;            /* Responsive: takes half the screen width */
-            max-width: 300px;      /* Will NOT grow larger than 400px */
-            min-width: 300px;      /* Optional: prevents it from getting too tiny */
+            max-width: 250px;      /* Will NOT grow larger than 400px */
+            min-width: 200px;      /* Optional: prevents it from getting too tiny */
             margin: 50px auto;     /* Centers the container */
-            padding: 20px;
+            padding: 0px;
             border-radius: 100px;      /* Optional for nicer look */
+            
         }
 
         .picture {
-            width: 100%;
+            width: 90%;
             height: auto;
             display: block;
             margin: auto;
             border-radius: 50%;
-             border: solid;
+            border: solid pink;
+            border-style: dotted;
+            border-width: 10px;
         }
 
         body {
@@ -36,7 +39,7 @@
         .qr-code {
             display: block;
             margin: 20px auto;
-            max-width: 100%;
+            max-width: 70%;
             height: auto;
             border: 5px solid;
         }
@@ -47,9 +50,15 @@
             font-size: 2em;
             margin-top: 20px;
             color: pink;
+
         }
 
         h2{
+            text-align: center;
+            color: pink;
+        }
+
+        h3{
             text-align: center;
             color: pink;
         }
@@ -65,14 +74,16 @@
             }
         }
 
+
     </style>
 </head>
 <body>
     <div class="container">
         <img src="./kenya.jpg" class="picture">
-        <img src="qr mock.png" class="qr-code">
+        <img src="cashapp-qr.jpg" class="qr-code">
         <h1 class="birthday">It's my Birthday</h1>
         <h2>Bless me and all my glory</h2>
+        <h3>$senseikenya</h3>
     </div>
 </body>
 </html>
